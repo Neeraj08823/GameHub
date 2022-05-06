@@ -133,7 +133,7 @@ nav li {
 @media screen and (max-width: 950px) {
   body{
     background-size: cover;
-    background-repeat:round;
+    /* background-repeat:round; */
   }
   .game_container {
     flex-wrap: wrap;
