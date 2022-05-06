@@ -6,7 +6,6 @@
 body {
   background-image: url(https://images.pexels.com/photos/1845829/pexels-photo-1845829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
-  background-repeat:round;
 }
 
 nav {
@@ -133,7 +132,6 @@ nav li {
 @media screen and (max-width: 950px) {
   body{
     background-size: cover;
-    /* background-repeat:round; */
   }
   .game_container {
     flex-wrap: wrap;
