@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Noto+Serif:wght@700&family=PT+Serif:ital@1&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  color: rgb(247, 123, 101);
+  height: 45px;
+  font-size: 25px;
+  display: flex;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#logoimg {
+  height: 40px;
+  width: 40px;
+  margin-top: 15px;
+  filter: invert();
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  background-image: url(https://images.pexels.com/photos/159393/gamepad-video-game-controller-game-controller-controller-159393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+}
+.sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  margin: 20px;
+}
+img:hover {
+  border-radius: 20px;
+}
+img {
+  height: 13rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+#card {
+  width: 200px;
+}
+a {
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(250, 227, 196);
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  color: rgb(247, 123, 101);
+}
+
+@media screen and (max-width: 950px) {
+  .sec {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 10px;
+  }
+}
