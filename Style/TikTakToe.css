@@ -156,8 +156,8 @@ nav ul{
   #div{
     margin-top: 15px;
     border: 2px solid black;
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: re */
+    padding-right: 2rem;
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
