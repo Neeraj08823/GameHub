@@ -41,11 +41,8 @@ nav ul{
   display: flex;
   min-height: 80vh;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  /* padding: 10px; */
-
-  
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .container {
@@ -156,8 +153,6 @@ nav ul{
   #div{
     margin-top: 15px;
     border: 2px solid black;
-    /* padding-left: re */
-    padding-right: 2rem;
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
