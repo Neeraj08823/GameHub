@@ -84,7 +84,7 @@ a:hover {
 
 @media screen and (max-width: 950px) {
   .sec {
-    min-height: 32vh;
+    min-height: 30vh;
     margin: 15px;
   }
   img {
