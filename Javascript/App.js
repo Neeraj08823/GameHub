@@ -51,7 +51,7 @@ const checkWinMob = () => {
     [1, 4, 7, 8, 30, 90],
     [2, 5, 8, 28, 30, 90],
     [0, 4, 8, 8, 30, 45],
-    [2, 4, 6, 7, 30, 135],
+    [2, 4, 6, 8, 30, 135],
   ];
   wins.forEach((e) => {
     if (
@@ -68,7 +68,7 @@ const checkWinMob = () => {
       document.querySelector(
         ".line"
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-      document.querySelector(".line").style.width = "45vw";
+      document.querySelector(".line").style.width = "44vw";
     }
   });
 };
