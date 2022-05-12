@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style/sudoku.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Style/sudoku.css" />
     <title>Sudoku</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <ul>
-          <li>
-            <img
-              class="img""
-              src="https://cdn-icons.flaticon.com/png/512/3269/premium/3269927.png?token=exp=1652267715~hmac=ea3f8407e8afb0ca45e58c06da6eed51"
-              alt="Game-logo"
-            />
-            <span id="text">Sudoku</span>
-          </li>
-          <li>
-            <a href="index.html"
-              ><img
-                class="img"
-                src="https://cdn-icons-png.flaticon.com/512/709/709624.png"
-                alt="back"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-      
-      <footer id="footer">&copy; Neeraj Kumar</footer>
-</body>
+      <ul>
+        <li>
+          <img class="img""
+          src="https://cdn-icons-png.flaticon.com/512/3401/3401089.png"
+          alt="Game-logo" />
+          <span id="text">Sudoku</span>
+        </li>
+        <li>
+          <a href="index.html"
+            ><img
+              class="img"
+              src="https://cdn-icons-png.flaticon.com/512/709/709624.png"
+              alt="back"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Sudoku</h1>
+    <br />
+    <div id="border">
+      <h2 id="errors">0</h2>
+        <!-- 9X9 Board -->
+        <div id="board"></div>
+        <br />
+        <div id="digits"></div>
+    </div>
+
+    <footer id="footer">&copy; Neeraj Kumar</footer>
+    <script src="./Javascript/sudoku.js"></script>
+  </body>
 </html>
