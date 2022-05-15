@@ -3,27 +3,21 @@ var tileselected = null;
 var error =0;
 
 var board = [
-    "--7-9-6-5",
-    "2---6-3-9",
-    "-----7-1-",
-    "-5-6----4",
-    "--3----9-",
-    "--62--1-7",
-    "9-4-7---2",
-    "67-83--9-",
-    "-1--45---"
+    "625-13",
+    "-----5",
+    "35----",
+    "164-5-",
+    "53----",
+    "-46-31"
 ]
 
 var solution = [
-    "387491625",
-    "241568379",
-    "569327418",
-    "758619234",
-    "123784596",
-    "496253187",
-    "934176852",
-    "675832941",
-    "812945763"
+    "625413",
+    "413625",
+    "352164",
+    "164352",
+    "531246",
+    "246531"
 ]
 
 window.onload = function(){
@@ -32,7 +26,7 @@ window.onload = function(){
 
 function setGame(){
     // Digits
-    for(let i=1; i<= 9; i++){
+    for(let i=1; i<= 6; i++){
         // <div id ="i" class ="number">i</div>
         let number = document.createElement("div");
         number.id = i;
@@ -43,18 +37,18 @@ function setGame(){
     }
 
     // Board 9X9
-    for(let r=0; r < 9; r++){
-        for(let c=0; c<9; c++){
+    for(let r=0; r < 6; r++){
+        for(let c=0; c<6; c++){
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             if(board[r][c] != "-"){
                 tile.innerText = board [r][c];
                 tile.classList.add("tileStart")
             }
-            if(r == 2 || r == 5 ){
+            if(r == 1 || r == 3 ){
                 tile.classList.add("hrline");
             }
-            if(c ==2 || c == 5 ){
+            if(c ==2){
                 tile.classList.add("vline");
             }
             tile.addEventListener("click", selectTile);

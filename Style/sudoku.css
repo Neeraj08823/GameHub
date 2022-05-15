@@ -53,15 +53,15 @@ h1{
 }
 
 #board {
-  width: 400px;
-  height: 400px;
+  width: 340px;
+  height: 340px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 .tile {
-  width: 42px;
-  height: 43px;
+  width: 50px;
+  height: 55px;
   border: 1px solid grey;
   background-color: black;
   color: white;
@@ -73,8 +73,8 @@ h1{
   align-items: center;
 }
 .number {
-  width: 38px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border: 1px solid white;
   background-color: black;
   color: whitesmoke;
@@ -90,8 +90,8 @@ h1{
 }
 
 #digits {
-  width: 400px;
-  height: 50px;
+  width: 335px;
+  height: 80px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -124,8 +124,8 @@ h1{
 
 @media screen and (max-width: 950px) {
   #board {
-    width: 250px;
-    height: 260px;
+    width: 170px;
+    height: 170px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -159,9 +159,10 @@ h1{
   }
 
   #digits {
-    width: 250px;
+    width: 170px;
     height: 30px;
     margin: 0 auto;
+    margin-bottom: 70%;
     display: flex;
     flex-wrap: wrap;
   }
