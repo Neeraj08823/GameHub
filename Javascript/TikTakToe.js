@@ -1,15 +1,17 @@
-console.log("Welcome to Tic  Tak Toe");
 let turn = "X";
 let isgameover = false;
+var x = 0;
+var y = 0;
 
 // function to change the turn
 const changeTurn = () => {
   return turn === "X" ? "0" : "X";
 };
 
+
 // function to check for a win
 const checkWin = () => {
-  let boxtext = document.getElementsByClassName("boxtext");
+  var boxtext = document.getElementsByClassName("boxtext");
   var wins = [
     [0, 1, 2, 5, 5, 0],
     [3, 4, 5, 5, 15, 0],
@@ -28,6 +30,14 @@ const checkWin = () => {
     ) {
       document.querySelector(".info").innerText =
         boxtext[e[0]].innerText + " Won";
+
+      if(boxtext[e[0]].innerText === "X"){
+        x += 1;
+        document.querySelector(".x").innerText = boxtext[e[0]].innerText + ": " + x;
+      }else if(boxtext[e[0]].innerText === "0"){
+        y += 1;
+        document.querySelector(".y").innerText = boxtext[e[0]].innerText + ": " + y;
+      }
       isgameover = true;
       document
         .querySelector(".image")
@@ -42,7 +52,7 @@ const checkWin = () => {
 
 // CheckWin for mediaQuery trigered
 const checkWinMob = () => {
-  let boxtext = document.getElementsByClassName("boxtext");
+  var boxtext = document.getElementsByClassName("boxtext");
   var wins = [
     [0, 1, 2, 8, 10, 0],
     [3, 4, 5, 8, 30, 0],
@@ -61,6 +71,13 @@ const checkWinMob = () => {
     ) {
       document.querySelector(".info").innerText =
         boxtext[e[0]].innerText + " Won";
+        if(boxtext[e[0]].innerText === "X"){
+          x += 1;
+          document.querySelector(".x").innerText = boxtext[e[0]].innerText + ": " + x;
+        }else if(boxtext[e[0]].innerText === "0"){
+          y += 1;
+          document.querySelector(".y").innerText = boxtext[e[0]].innerText + ": " + y;
+        }
       isgameover = true;
       document
         .querySelector(".image")
@@ -96,12 +113,29 @@ Array.from(boxes).forEach((element) => {
 });
 
 // reset logic
+restart.addEventListener("click", () => {
+  let boxtexts = document.querySelectorAll(".boxtext");
+  Array.from(boxtexts).forEach((element) => {
+    element.innerText = "";
+  });
+  turn = "X";
+  isgameover = false;
+  document.querySelector(".line").style.width = "0vw";
+  document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+  document.querySelector(".image").getElementsByTagName("img")[0].style.width =
+    "0px";
+});
+
 reset.addEventListener("click", () => {
   let boxtexts = document.querySelectorAll(".boxtext");
   Array.from(boxtexts).forEach((element) => {
     element.innerText = "";
   });
   turn = "X";
+  x = 0;
+  y = 0;
+  document.querySelector(".x").innerText = "X: ";
+  document.querySelector(".y").innerText = "Y: ";
   isgameover = false;
   document.querySelector(".line").style.width = "0vw";
   document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;

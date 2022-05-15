@@ -71,6 +71,17 @@ nav ul {
   font-size: 22px;
 }
 
+#score{
+  font-family: none;
+  font-size: large;
+  font-weight: bold;
+  border: 2px solid black;
+  width: 50px;
+}
+.x{
+  border-bottom: 2px solid black;
+}
+
 #div {
   margin-left: 10px;
   border: 2px solid black;
@@ -104,15 +115,29 @@ nav ul {
   border-bottom: 0;
 }
 
-#reset {
-  margin: 0 25px;
+#restart{
   padding: 1px 15px;
   background-color: rgb(37, 29, 8);
   color: rgb(235, 201, 160);
   font-family: "Roboto Slab", serif;
   cursor: pointer;
   border-radius: 10px;
+  font-weight: bolder;
+}
 
+#restart:hover {
+  border-radius: 12px;
+  background-color: rgb(92, 83, 83);
+  color: whitesmoke;
+}
+#reset{
+  padding: 1px 15px;
+  margin-top: 100px;
+  background-color: rgb(37, 29, 8);
+  color: rgb(235, 201, 160);
+  font-family: "Roboto Slab", serif;
+  cursor: pointer;
+  border-radius: 10px;
   font-weight: bolder;
 }
 

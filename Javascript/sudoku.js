@@ -3,12 +3,12 @@ var tileselected = null;
 var error =0;
 
 var board = [
-    "625-13",
-    "-----5",
-    "35----",
-    "164-5-",
-    "53----",
-    "-46-31"
+    "6-5-1-",
+    "---6-5",
+    "35--6-",
+    "--4-5-",
+    "5--2--",
+    "-4--31"
 ]
 
 var solution = [
@@ -87,3 +87,35 @@ function selectTile (){
         }
     }
 }
+
+
+// function shuffleBoard() {
+//     matchedCard = 0;
+//     cardOne = cardTwo = "";
+  
+//     board = [
+//         "6-5-1-",
+//         "---6-5",
+//         "35--6-",
+//         "--4-5-",
+//         "5--2--",
+//         "-4--31"
+//     ]
+//     solution = [
+//         "625413",
+//         "413625",
+//         "352164",
+//         "164352",
+//         "531246",
+//         "246531"
+//     ]
+//     board.sort(() => (Math.random() > 0.5 ? 1 : -1)); //sorting array item randomly
+//     solution.sort(() => (Math.random() > 0.5 ? 1 : -1)); //sorting array item randomly
+// }
+// shuffleBoard();
+
+// if(solution[r][c] == numselected.id){
+//     setTimeout(() => {
+//         return shuffleCard();
+//       }, 1200); 
+// }
