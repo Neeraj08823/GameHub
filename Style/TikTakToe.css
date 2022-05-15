@@ -76,6 +76,7 @@ nav ul {
   font-size: large;
   font-weight: bold;
   border: 2px solid black;
+  border-radius: 5px;
   width: 50px;
 }
 .x{
