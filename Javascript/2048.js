@@ -43,7 +43,7 @@ function updateTile(tile, num) {
   }
 }
 
-document.addEventListener("keyup",(e) => {
+document.addEventListener("keyup", (e) => {
   if (e.code == "ArrowLeft") {
     slideLeft();
     setTwo();
@@ -60,42 +60,41 @@ document.addEventListener("keyup",(e) => {
   document.getElementById("score").innerText = score;
 });
 
-document.addEventListener('touchstart', handleTouchStart);
+document.addEventListener("touchstart", handleTouchStart, false);
+document.addEventListener("touchmove", handleTouchMove, false);
 
-let xDown = null;       
+let xDown = null;
 let yDown = null;
 
 function handleTouchStart(evt) {
   xDown = evt.touches[0].clientX;
-  yDown = evt.touches[0].clientY;     
-};
-   
+  yDown = evt.touches[0].clientY;
+}
 
-document.addEventListener('touchmove',(evt) =>{
+function handleTouchMove(evt) {
   const xUp = evt.touches[0].clientX;
   const yUp = evt.touches[0].clientY;
 
   const xDiff = xDown - xUp;
   const yDiff = yDown - yUp;
 
-  if ( Math.abs(xDiff) > Math.abs(yDiff) ) {
-  if (xDiff > 0 ) {
-    slideLeft();
-    setTwo();
-  } else if (xDiff <= 0 ) {
-    slideRight();
-    setTwo();
-  } else if (yDiff > 0) {
-    slideUp();
-    setTwo();
-  } else if (yDiff <= 0) {
-    slideDown();
-    setTwo();
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      slideLeft();
+      setTwo();
+    } else if (xDiff <= 0) {
+      slideRight();
+      setTwo();
+    } else if (yDiff > 0) {
+      slideUp();
+      setTwo();
+    } else if (yDiff <= 0) {
+      slideDown();
+      setTwo();
+    }
   }
-}
   document.getElementById("score").innerText = score;
-})
-
+}
 
 function filterZero(row) {
   return row.filter((num) => num != 0); //create new array of all nums != 0
