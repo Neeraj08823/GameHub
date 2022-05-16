@@ -60,6 +60,40 @@ document.addEventListener("keyup", (e) => {
   document.getElementById("score").innerText = score;
 });
 
+document.addEventListener("touchstart",(e) =>{
+  if (e.code == "ArrowLeft") {
+    slideLeft();
+    setTwo();
+  } else if (e.code == "ArrowRight") {
+    slideRight();
+    setTwo();
+  } else if (e.code == "ArrowUp") {
+    slideUp();
+    setTwo();
+  } else if (e.code == "ArrowDown") {
+    slideDown();
+    setTwo();
+  }
+  document.getElementById("score").innerText = score;
+})
+
+document.addEventListener("touchmove",(e) =>{
+  if (e.code == "ArrowLeft") {
+    slideLeft();
+    setTwo();
+  } else if (e.code == "ArrowRight") {
+    slideRight();
+    setTwo();
+  } else if (e.code == "ArrowUp") {
+    slideUp();
+    setTwo();
+  } else if (e.code == "ArrowDown") {
+    slideDown();
+    setTwo();
+  }
+  document.getElementById("score").innerText = score;
+})
+
 function filterZero(row) {
   return row.filter((num) => num != 0); //create new array of all nums != 0
 }
