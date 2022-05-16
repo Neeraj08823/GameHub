@@ -43,7 +43,7 @@ function updateTile(tile, num) {
   }
 }
 
-document.addEventListener("keyup", (e) => {
+document.addEventListener("keyup",(e) => {
   if (e.code == "ArrowLeft") {
     slideLeft();
     setTwo();
@@ -60,34 +60,33 @@ document.addEventListener("keyup", (e) => {
   document.getElementById("score").innerText = score;
 });
 
-document.addEventListener("touchstart",(e) =>{
-  if (e.code == "ArrowLeft") {
+document.addEventListener('touchstart', (e) =>{
+  if (e.code == "StartLeft") {
     slideLeft();
     setTwo();
-  } else if (e.code == "ArrowRight") {
+  } else if (e.code == "StartRight") {
     slideRight();
     setTwo();
-  } else if (e.code == "ArrowUp") {
+  } else if (e.code == "StartUp") {
     slideUp();
     setTwo();
-  } else if (e.code == "ArrowDown") {
+  } else if (e.code == "StartDown") {
     slideDown();
     setTwo();
   }
-  document.getElementById("score").innerText = score;
 })
 
-document.addEventListener("touchmove",(e) =>{
-  if (e.code == "ArrowLeft") {
+document.addEventListener('touchmove',(e) =>{
+  if (e.code == "TouchLeft") {
     slideLeft();
     setTwo();
-  } else if (e.code == "ArrowRight") {
+  } else if (e.code == "TouchRight") {
     slideRight();
     setTwo();
-  } else if (e.code == "ArrowUp") {
+  } else if (e.code == "TouchUp") {
     slideUp();
     setTwo();
-  } else if (e.code == "ArrowDown") {
+  } else if (e.code == "TouchDown") {
     slideDown();
     setTwo();
   }
