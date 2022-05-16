@@ -61,32 +61,32 @@ document.addEventListener("keyup",(e) => {
 });
 
 document.addEventListener('touchstart', (e) =>{
-  if (e.code == "StartLeft") {
+  if (e.touches == "clientX") {
     slideLeft();
     setTwo();
-  } else if (e.code == "StartRight") {
+  } else if (e.touches == "clientX") {
     slideRight();
     setTwo();
-  } else if (e.code == "StartUp") {
+  } else if (e.touches == "clientY") {
     slideUp();
     setTwo();
-  } else if (e.code == "StartDown") {
+  } else if (e.touches == "clientY") {
     slideDown();
     setTwo();
   }
 })
 
 document.addEventListener('touchmove',(e) =>{
-  if (e.code == "TouchLeft") {
+  if (e.touches == "clientX") {
     slideLeft();
     setTwo();
-  } else if (e.code == "TouchRight") {
+  } else if (e.touches == "clientX") {
     slideRight();
     setTwo();
-  } else if (e.code == "TouchUp") {
+  } else if (e.touches == "clientY") {
     slideUp();
     setTwo();
-  } else if (e.code == "TouchDown") {
+  } else if (e.touches == "clientY") {
     slideDown();
     setTwo();
   }
@@ -190,7 +190,7 @@ function setTwo() {
 }
 
 function hasEmptyTile() {
-  let count = 0;
+  // let count = 0;
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
       if (board[r][c] == 0) {
