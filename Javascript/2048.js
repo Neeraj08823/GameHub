@@ -60,38 +60,40 @@ document.addEventListener("keyup",(e) => {
   document.getElementById("score").innerText = score;
 });
 
-document.addEventListener('touchstart', (e) =>{
-  if (e.touches == "clientX") {
-    slideLeft();
-    setTwo();
-  } else if (e.touches == "clientX") {
-    slideRight();
-    setTwo();
-  } else if (e.touches == "clientY") {
-    slideUp();
-    setTwo();
-  } else if (e.touches == "clientY") {
-    slideDown();
-    setTwo();
-  }
-})
+let xDown = null;       
+let yDown = null;
 
-document.addEventListener('touchmove',(e) =>{
-  if (e.touches == "clientX") {
+function handleTouchStart(evt) {
+  xDown = evt.touches[0].clientX;
+  yDown = evt.touches[0].clientY;     
+};
+   
+
+document.addEventListener('touchmove',(evt) =>{
+  const xUp = evt.touches[0].clientX;
+  const yUp = evt.touches[0].clientY;
+
+  const xDiff = xDown - xUp;
+  const yDiff = yDown - yUp;
+
+  if ( Math.abs(xDiff) > Math.abs(yDiff) ) {
+  if (xDiff > 0 ) {
     slideLeft();
     setTwo();
-  } else if (e.touches == "clientX") {
+  } else if (xDiff <= 0 ) {
     slideRight();
     setTwo();
-  } else if (e.touches == "clientY") {
+  } else if (yDiff > 0) {
     slideUp();
     setTwo();
-  } else if (e.touches == "clientY") {
+  } else if (yDiff <= 0) {
     slideDown();
     setTwo();
   }
+}
   document.getElementById("score").innerText = score;
 })
+
 
 function filterZero(row) {
   return row.filter((num) => num != 0); //create new array of all nums != 0
