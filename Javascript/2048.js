@@ -71,7 +71,7 @@ function handleTouchStart(evt) {
 };
    
 
-document.addEventListener('touchmove',(e) =>{
+document.addEventListener('touchmove',(evt) =>{
   const xUp = evt.touches[0].clientX;
   const yUp = evt.touches[0].clientY;
 

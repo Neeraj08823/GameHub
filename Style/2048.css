@@ -52,8 +52,7 @@ nav ul {
 
   background-color: #cdc1b5;
   border: 6px solid #bbaba0;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 4% auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -146,7 +145,7 @@ nav ul {
   
     background-color: #cdc1b5;
     border: 5px solid #bbaba0;
-    margin: 0 auto;
+    margin: 4% auto;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
