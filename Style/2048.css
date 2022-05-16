@@ -134,6 +134,12 @@ nav ul {
 }
 
 @media screen and (max-width: 950px) {
+  
+  body {
+    background-image: url(https://images.pexels.com/photos/1441931/pexels-photo-1441931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+  }
+  
   #main {
     color: whitesmoke;
     text-align: center;
