@@ -60,6 +60,8 @@ document.addEventListener("keyup",(e) => {
   document.getElementById("score").innerText = score;
 });
 
+document.addEventListener('touchstart', handleTouchStart);
+
 let xDown = null;       
 let yDown = null;
 
@@ -69,7 +71,7 @@ function handleTouchStart(evt) {
 };
    
 
-document.addEventListener('touchmove',(evt) =>{
+document.addEventListener('touchmove',(e) =>{
   const xUp = evt.touches[0].clientX;
   const yUp = evt.touches[0].clientY;
 

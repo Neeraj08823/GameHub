@@ -41,16 +41,10 @@ nav ul {
   width: 40px;
 }
 
-hr {
-  color: white;
-  width: 500px;
-  margin: 0 auto;
-}
-
 #main {
   color: whitesmoke;
   text-align: center;
-  height: 500px;
+  height: 560px;
 }
 #board {
   width: 400px;
@@ -138,6 +132,36 @@ hr {
 .x8192 {
   background-color: #ff2020;
   color: white;
+}
+
+@media screen and (max-width: 950px) {
+  #main {
+    color: whitesmoke;
+    text-align: center;
+    height: 700px;
+  }
+  #board {
+    width: 380px;
+    height: 380px;
+  
+    background-color: #cdc1b5;
+    border: 5px solid #bbaba0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tile {
+    width: 85px;
+    height: 85px;
+    border: 5px solid #bbaba0;
+  
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #footer {
