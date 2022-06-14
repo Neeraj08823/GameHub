@@ -6,7 +6,7 @@ var columns = 4;
 window.onload = function () {
   setGame();
 };
-
+// card board
 function setGame() {
   board = [
     [0, 0, 0, 0],
@@ -29,6 +29,7 @@ function setGame() {
   setTwo();
 }
 
+// Update tiles
 function updateTile(tile, num) {
   tile.innerText = "";
   tile.classList.value = ""; //clear the classList
@@ -43,6 +44,7 @@ function updateTile(tile, num) {
   }
 }
 
+// action performed when arrow key press
 document.addEventListener("keyup", (e) => {
   if (e.code == "ArrowLeft") {
     slideLeft();
@@ -60,6 +62,8 @@ document.addEventListener("keyup", (e) => {
   document.getElementById("score").innerText = score;
 });
 
+
+// Action performed when game play in touchScreen
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 
@@ -118,6 +122,7 @@ function slide(row) {
   return row;
 }
 
+// function for leftKey
 function slideLeft() {
   for (let r = 0; r < rows; r++) {
     let row = board[r];
@@ -131,6 +136,7 @@ function slideLeft() {
   }
 }
 
+// function for rightKey
 function slideRight() {
   for (let r = 0; r < rows; r++) {
     let row = board[r]; //[0, 2, 2, 2]
@@ -145,6 +151,7 @@ function slideRight() {
   }
 }
 
+// function for upKey
 function slideUp() {
   for (let c = 0; c < columns; c++) {
     let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
@@ -158,6 +165,7 @@ function slideUp() {
   }
 }
 
+// function for downKey
 function slideDown() {
   for (let c = 0; c < columns; c++) {
     let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
@@ -173,6 +181,7 @@ function slideDown() {
   }
 }
 
+// function for set initial value of tile
 function setTwo() {
   if (!hasEmptyTile()) {
     return;
