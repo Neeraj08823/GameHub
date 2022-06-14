@@ -8,7 +8,6 @@ const changeTurn = () => {
   return turn === "X" ? "0" : "X";
 };
 
-
 // function to check for a win
 const checkWin = () => {
   var boxtext = document.getElementsByClassName("boxtext");
@@ -31,12 +30,14 @@ const checkWin = () => {
       document.querySelector(".info").innerText =
         boxtext[e[0]].innerText + " Won";
 
-      if(boxtext[e[0]].innerText === "X"){
+      if (boxtext[e[0]].innerText === "X") {
         x += 1;
-        document.querySelector(".x").innerText = boxtext[e[0]].innerText + ": " + x;
-      }else if(boxtext[e[0]].innerText === "0"){
+        document.querySelector(".x").innerText =
+          boxtext[e[0]].innerText + ": " + x;
+      } else if (boxtext[e[0]].innerText === "0") {
         y += 1;
-        document.querySelector(".y").innerText = boxtext[e[0]].innerText + ": " + y;
+        document.querySelector(".y").innerText =
+          boxtext[e[0]].innerText + ": " + y;
       }
       isgameover = true;
       document
@@ -71,13 +72,15 @@ const checkWinMob = () => {
     ) {
       document.querySelector(".info").innerText =
         boxtext[e[0]].innerText + " Won";
-        if(boxtext[e[0]].innerText === "X"){
-          x += 1;
-          document.querySelector(".x").innerText = boxtext[e[0]].innerText + ": " + x;
-        }else if(boxtext[e[0]].innerText === "0"){
-          y += 1;
-          document.querySelector(".y").innerText = boxtext[e[0]].innerText + ": " + y;
-        }
+      if (boxtext[e[0]].innerText === "X") {
+        x += 1;
+        document.querySelector(".x").innerText =
+          boxtext[e[0]].innerText + ": " + x;
+      } else if (boxtext[e[0]].innerText === "0") {
+        y += 1;
+        document.querySelector(".y").innerText =
+          boxtext[e[0]].innerText + ": " + y;
+      }
       isgameover = true;
       document
         .querySelector(".image")

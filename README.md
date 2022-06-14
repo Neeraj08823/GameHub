@@ -1,9 +1,9 @@
 <h1>GameHub</h1>
 <p>Create GameHub (collection of 4 game).</p>
   <ul>
-    <li> TikTakToe
+    <li> TicTacToe
       </li>
-   <li> Card Matching
+   <li> Memory Game
       </li>
   <li>Sudoku
     </li>
@@ -12,3 +12,4 @@
   </ul>
 <p>Feature :- Responsive work in PC and Mobile.</p>
 <p>Tech Stack :- HTML, CSS, JavaScript.</p>
+<p>Role :- Software Developer.</p>
