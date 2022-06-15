@@ -1,5 +1,5 @@
 <h1>GameHub</h1>
-Multiple Mini Game using  HTML ,CSS & JavaScript.<br/>
+Multiple Mini Game using  HTML ,CSS & JavaScript.
 
 <p>A Simple HTML ,CSS & JavaScript Project  for Game Website.</p>
   <ul>
